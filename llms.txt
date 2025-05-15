@@ -311,7 +311,7 @@ function example() {
 
 ## 6. Переиспользование контента
 
-### Механизм включения (includes)
+### Инклюды — вставка кода из другого файла (includes)
 
 Вынесите повторяющийся контент в отдельные файлы для переиспользования.
 
@@ -364,10 +364,27 @@ yfm -i ./input-folder -o ./output-folder --output-format=md
 Автоматически создавайте документацию API из OpenAPI-спецификации.
 
 ```yaml
-# .yfm
-openApiOptions:
-  spec: ./path/to/spec.yaml
-  targetDir: ./api
+# doc_root/toc.yaml
+title: documentation
+href: index.yaml
+items:
+  - name: openapi
+    include:
+      path: openapi
+      includers:
+        - name: openapi
+          input: openapi.yaml
+      mode: link
+```
+
+Для подключения сгенерированной документации в разводящую страницу index.yaml:
+
+```yaml
+# doc_root/index.yaml
+title: documentation
+links:
+  - title: openapi
+    href: openapi/
 ```
 
 - [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/guides/openapi.md)
@@ -412,3 +429,96 @@ links:
 
 - [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/leading-page.md)
 
+
+## Полное содержание документации
+
+### О платформе
+- [О платформе Diplodoc](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/about.md): Общее представление о платформе
+- [Функциональные возможности](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/features.md): Обзор основных функций платформы
+
+### Начало работы
+- [Публикация на Diplodoc.com](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/how-it-work.md): Как опубликовать документацию на платформе
+- [Локальная сборка проекта](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/installation.md): Настройка и сборка проекта на локальной машине
+- [Шаблон проекта](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/static-template.md): Готовый шаблон для быстрого старта
+
+### Редактирование контента
+#### Синтаксис
+- [Yandex Flavored Markdown](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/index-yfm.md): Основы диалекта Markdown от Яндекса
+- [Базовая разметка](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/base.md): Основные элементы форматирования
+- [Списки](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/lists.md): Маркированные и нумерованные списки
+- [Простые таблицы](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/tables/gfm.md): Создание стандартных таблиц
+- [Многострочные таблицы](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/tables/multiline.md): Создание таблиц со сложной структурой
+- [Заметки](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/notes.md): Выделение важной информации
+- [Интерактивные элементы](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/interactive-elements/index.md): Обзор интерактивных компонентов
+  - [Каты](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/interactive-elements/cuts.md): Скрываемые блоки контента
+  - [Табы](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/interactive-elements/tabs.md): Переключаемые вкладки
+  - [Радиобаттоны](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/interactive-elements/radio.md): Переключатели с радиокнопками
+  - [Дропдаун](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/interactive-elements/dropdawn.md): Выпадающие списки
+  - [Аккордеон](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/interactive-elements/accordion.md): Раскрывающиеся секции
+- [Ссылки](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/links.md): Создание и оформление ссылок
+- [Медиа](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/media.md): Вставка изображений и видео
+- [Фрагменты кода](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/code.md): Оформление примеров кода
+- [Комментарии и метаданные](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/meta.md): Работа с метаинформацией документов
+- [Переменные](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/vars.md): Использование переменных в документации
+- [Всплывающие подсказки](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/term.md): Создание терминов с пояснениями
+- [Дополнительные возможности](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/additional.md): Расширенные функции разметки
+
+#### Организация контента
+- [Обзор проекта](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/index.md): Структура документационного проекта
+- [Оглавление](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/toc.md): Создание навигации по документации
+  - [Оглавление на странице](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/minitoc.md): Навигация внутри страницы документации
+- [Разводящая страница](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/leading-page.md): Создание главной страницы документации
+
+#### Page constructor
+- [Обзор конструктора страниц](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/page-constructor.md): Инструмент для создания сложных страниц
+- [Пример 1](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/pc-example1.yaml): Базовый пример использования
+- [Пример 2](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/pc-example2.yaml): Более сложный пример
+- [Пример 3 (fullScreen mode)](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/pc-example3.yaml): Пример с полноэкранным режимом
+
+### Конфигурация проекта
+- [Настройки проекта](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/settings.md): Основные настройки документации
+- [Файл конфигурации](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/config.md): Настройка параметров в .yfm
+- [Поиск](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/search.md): Настройка поисковой системы
+- [Пресеты переменных](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/presets.md): Управление наборами переменных
+- [Переиспользование контента](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/includes.md): Работа с повторяющимися блоками
+- [Файл конфигурации линтера](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/lint.md): Настройка проверки качества документации
+
+### Настройка внешнего вида
+- [Расширенная навигация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/navigation.md): Настройка меню и панелей навигации
+- [Подключение CSS](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/style/css.md): Использование кастомных стилей
+
+### Публикация
+- [Публикация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/deploy.md): Общие принципы публикации документации
+- [GitHub Pages](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/github-pages.md): Публикация на GitHub Pages
+
+### CLI
+- [Обзор CLI](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/docs/index.md): Введение в командный интерфейс
+- [Сборка](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/docs/build.md): Команды для сборки документации
+- [Настройки сборки](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/docs/settings.md): Параметры для команды сборки
+- [Локализация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/docs/translate.md): Работа с переводами документации
+- [Одностраничная сборка](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/docs/singlepage.md): Генерация документации в одну страницу
+- [Выкладка на S3](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/docs/publish-s3.md): Публикация документации в облачное хранилище
+
+### Практические руководства
+- [Контентная аналитика](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/guides/content-analytics.md): Сбор и анализ метрик использования документации
+- [Настройка личного домена](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/personal-domain-ya-cloud.md): Привязка собственного домена
+- [Автогенерация и интеграция](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/guides/includers.md): Обзор инструментов автоматической генерации
+  - [Generic интеграция](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/guides/generic.md): Универсальный способ интеграции документации
+  - [OpenAPI автогенерация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/guides/openapi.md): Генерация документации из API-спецификаций
+  - [Unarchive интеграция](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/guides/unarchive.md): Работа с архивированными документами
+  - [Source Docs интеграция](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/guides/source-docs.md): Интеграция документации из исходного кода
+- [Content Security Policy](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/guides/csp.md): Настройка политики безопасности контента
+- [Версионирование документации](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/guides/release-version.md): Управление версиями документации
+
+### Инструменты и библиотеки
+- [Transformer](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/transform/index.md): Основные сведения о трансформере документации
+  - [Настройки трансформера](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/transform/settings.md): Параметры конфигурации
+  - [Подсветка кода](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/transform/highlight.md): Настройка подсветки синтаксиса
+- [Плагины](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/plugins/index.md): Работа с плагинами системы
+  - [Дополнительные плагины](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/plugins/import.md): Установка и настройка сторонних плагинов
+- [Библиотека Mermaid](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/mermaid.md): Создание диаграмм в документации
+
+### Для разработчиков
+- [Быстрый старт](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/dev/quickstart.md): Начало работы для разработчиков
+- [Внесение изменений](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/dev/contribution.md): Руководство по контрибьюции
+- [Метапакет](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/dev/metapackage.md): Документация по метапакету системы
