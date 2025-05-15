@@ -12,7 +12,7 @@
 *Курсив*
 ```
 
-- [Подробная информация](./ru/index-yfm.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/index-yfm.md)
 
 ### Преимущества
 
@@ -41,7 +41,7 @@ input-folder
 |    |-- shared_block.md
 ```
 
-- [Подробная информация](./ru/project/index.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/index.md)
 
 ## 3. Оглавление документа (toc.yaml)
 
@@ -61,7 +61,7 @@ items:
         href: path/to/file.md
 ```
 
-- [Подробная информация](./ru/project/toc.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/toc.md)
 
 ### Условия видимости разделов
 
@@ -73,7 +73,7 @@ items:
   when: version == 12
 ```
 
-- [Подробная информация](./ru/project/toc.md#when)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/toc.md#when)
 
 ### Включение оглавлений
 
@@ -89,7 +89,7 @@ items:
 - include: { path: path/to/toc.yaml }
 ```
 
-- [Подробная информация](./ru/project/toc.md#includes)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/toc.md#includes)
 
 ## 4. Переменные и пресеты
 
@@ -101,7 +101,7 @@ items:
 Какой-то текст {{ имя_переменной }} продолжение текста.
 ```
 
-- [Подробная информация](./ru/syntax/vars.md#subtitudes)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/vars.md#subtitudes)
 
 ### Условные операторы
 
@@ -115,7 +115,7 @@ items:
 {% endif %}
 ```
 
-- [Подробная информация](./ru/syntax/vars.md#conditions)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/vars.md#conditions)
 
 ### Циклы
 
@@ -127,7 +127,7 @@ items:
 {% endfor %}
 ```
 
-- [Подробная информация](./ru/syntax/vars.md#cycles)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/vars.md#cycles)
 
 ### Фильтры и функции
 
@@ -139,7 +139,7 @@ items:
 {{ user.name.slice(1, 3) }}
 ```
 
-- [Подробная информация](./ru/syntax/vars.md#filters)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/vars.md#filters)
 
 ### Пресеты переменных
 
@@ -155,7 +155,7 @@ external:
     place: Страна Оз
 ```
 
-- [Подробная информация](./ru/project/presets.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/presets.md)
 
 ## 5. Расширения Markdown
 
@@ -173,7 +173,7 @@ external:
 {% endnote %}
 ```
 
-- [Подробная информация](./ru/syntax/notes.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/notes.md)
 
 ### Cuts (каты)
 
@@ -187,7 +187,7 @@ function example() {
 {% endcut %}
 ```
 
-- [Подробная информация](./ru/syntax/interactive-elements/cuts.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/interactive-elements/cuts.md)
 
 ### Tabs (табы)
 
@@ -211,7 +211,7 @@ function example() {
 {% endlist %}
 ```
 
-- [Подробная информация](./ru/syntax/interactive-elements/tabs.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/interactive-elements/tabs.md)
 
 ### Radio (радиобаттоны)
 
@@ -231,7 +231,7 @@ function example() {
 {% endlist %}
 ```
 
-- [Подробная информация](./ru/syntax/interactive-elements/radio.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/interactive-elements/radio.md)
 
 ### Dropdown (дропдаун)
 
@@ -251,7 +251,7 @@ function example() {
 {% endlist %}
 ```
 
-- [Подробная информация](./ru/syntax/interactive-elements/dropdawn.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/interactive-elements/dropdawn.md)
 
 ### Accordion (аккордеон)
 
@@ -271,7 +271,7 @@ function example() {
 {% endlist %}
 ```
 
-- [Подробная информация](./ru/syntax/interactive-elements/accordion.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/interactive-elements/accordion.md)
 
 ### Term (всплывающие подсказки)
 
@@ -284,7 +284,7 @@ function example() {
 Может включать _базовую_ разметку.
 ```
 
-- [Подробная информация](./ru/syntax/term.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/term.md)
 
 ### Media (медиаконтент)
 
@@ -296,7 +296,7 @@ function example() {
 ![Альтернативный текст](_images/image.png "Подсказка при наведении" =100x100)
 ```
 
-- [Подробная информация](./ru/syntax/media.md#images)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/media.md#images)
 
 #### Видео
 
@@ -307,7 +307,7 @@ function example() {
 @[vk](https://vk.com/video_ext.php?oid=-ID&id=ID)
 ```
 
-- [Подробная информация](./ru/syntax/media.md#video)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/syntax/media.md#video)
 
 ## 6. Переиспользование контента
 
@@ -320,7 +320,7 @@ function example() {
 {% include notitle [Без заголовка](../_includes/file.md) %}
 ```
 
-- [Подробная информация](./ru/project/includes.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/includes.md)
 
 ## 7. Сборка документации
 
@@ -330,7 +330,7 @@ function example() {
 npm i @diplodoc/cli -g
 ```
 
-- [Подробная информация](./ru/tools/docs/index.md#install)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/docs/index.md#install)
 
 ### Команды сборки
 
@@ -342,7 +342,7 @@ yfm -i ./input-folder -o ./output-folder
 yfm -i ./input-folder -o ./output-folder --output-format=md
 ```
 
-- [Подробная информация](./ru/tools/docs/build.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/docs/build.md)
 
 ### Параметры сборки
 
@@ -355,7 +355,7 @@ yfm -i ./input-folder -o ./output-folder --output-format=md
 --varsPreset       Используемый пресет переменных
 ```
 
-- [Подробная информация](./ru/tools/docs/settings.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/tools/docs/settings.md)
 
 ## 8. Автогенерация документации
 
@@ -370,7 +370,7 @@ openApiOptions:
   targetDir: ./api
 ```
 
-- [Подробная информация](./ru/guides/openapi.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/guides/openapi.md)
 
 ## 9. Кастомизация документации
 
@@ -391,7 +391,7 @@ docs-viewer:
   langs: ['en','ru']
 ```
 
-- [Подробная информация](./ru/project/config.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/config.md)
 
 ### Разводящие страницы
 
@@ -410,4 +410,5 @@ links:
     href: ./api/index.md
 ```
 
-- [Подробная информация](./ru/project/leading-page.md)
+- [Подробная информация](https://raw.githubusercontent.com/migs911/Diplodoc-documentation/refs/heads/master/ru/project/leading-page.md)
+
