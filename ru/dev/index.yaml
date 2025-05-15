@@ -1,0 +1,19 @@
+title: Гайды для разработчиков платформы Diplodoc
+meta:
+  metadata:
+    - name: generator
+      content: Diplodoc Platform v4.57.23
+  title: Метаданные
+  noIndex: true
+links:
+  - title: Быстрый старт
+    description: Как быстро начать разработку с использованием GitHub Codespaces
+    href: quickstart.md
+  - title: Внесение изменений
+    description: >-
+      Правила по оформлению коммитов и пулл реквестов. Рекомендации к
+      используемым технологиям.
+    href: contribution.md
+  - title: Метапакет
+    description: Описание структуры метапакета. Нюансы работы с метапакетом.
+    href: metapackage.md
